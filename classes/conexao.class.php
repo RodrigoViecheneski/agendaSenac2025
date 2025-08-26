@@ -21,7 +21,7 @@ class Conexao
             if(is_null(self::$pdo)){
                 self::$pdo = new PDO("mysql:host=".$this->servidor.";dbname=".$this->banco, $this->usuario, $this->senha);
             }
-            echo "CONECTOU";
+           // echo "CONECTOU";
             return self::$pdo;
         } catch(PDOException $ex){
             echo $ex->getMessage();
